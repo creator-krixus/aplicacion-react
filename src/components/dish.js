@@ -2,7 +2,7 @@
  *  debe ir asi hagas muchos componentes 
  */
 
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 /**este tipo de clase con la palabra export antes de class se usa para una exportacion
  * nombrada
  * Esta clase se puede usar dentro de la clase principal que es la que se exporta por 
@@ -22,14 +22,31 @@ export class Flag extends Component{
 /**
  * Esta clase se puede usar dentro de la clase principal que es la que se exporta por 
  * default
+ * las clase tambien se pueden generar con codigo nativo de react pero es un poco
+ * mas facil con el de jxson
+ * aqui un ejemplo 
+ * las clases funcionan igual con las dos formas
+ */
+
+/*export class Ingredients extends Component{
+   
+    render(){
+        return React.createElement("h1", {}, "ingredientes");
+    }
+}*/
+/**revisar la documentacion para aclara el concepto fragment
+ * https://es.reactjs.org/docs/fragments.html
+ * 
  */
 export class Ingredients extends Component{
    
     render(){
         return(
-            <div>
+            <Fragment>
+                {/* estos son comentarios jxs que van dentro de las etiquetas */}
                 <h1>ingredientes</h1>
-            </div>
+                <h1>ingredientes</h1>
+            </Fragment>
         );
     }
 }
