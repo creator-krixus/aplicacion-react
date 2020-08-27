@@ -3,6 +3,8 @@
  */
 
 import React, { Component, Fragment } from "react";
+/**este es una importacion de material-ui */
+import Button from '@material-ui/core/Button';
 /**este tipo de clase con la palabra export antes de class se usa para una exportacion
  * nombrada
  * Esta clase se puede usar dentro de la clase principal que es la que se exporta por 
@@ -23,7 +25,7 @@ export class Flag extends Component{
  * Esta clase se puede usar dentro de la clase principal que es la que se exporta por 
  * default
  * las clase tambien se pueden generar con codigo nativo de react pero es un poco
- * mas facil con el de jxson
+ * mas facil con el de jsx
  * aqui un ejemplo 
  * las clases funcionan igual con las dos formas
  */
@@ -42,10 +44,11 @@ export class Ingredients extends Component{
    
     render(){
         return(
-            <Fragment>
+            <Fragment >
                 {/* estos son comentarios jxs que van dentro de las etiquetas */}
-                <h1>ingredientes</h1>
-                <h1>ingredientes</h1>
+                <h4>ingredientes</h4>
+                <h4>ingredientes</h4>
+                
             </Fragment>
         );
     }
@@ -62,9 +65,14 @@ class Dish extends Component{
     //dentro del cual se escriben las etiquetas html
     render(){
         return(
-            <div>
-                <h1>platillos</h1>
+            /**este nombre de clase se usa para dar forma con los archivos css */
+            <div className="dish">
+                {/**para acceder a la informacion se le coloca la propieda props con n cantidad
+                 * de atributos 
+                 */}
+                <h1>{ this.props.name }</h1>
                 <Ingredients />
+                <Button variant="contained">Default</Button>
             </div>
         );
     }

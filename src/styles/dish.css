@@ -1,0 +1,12 @@
+h4{
+    color: red;
+}
+/*Con esta clase afectamos todos los div con el className dish que se encuentren
+en la aplicacion
+*/
+.dish{
+    width: 200px;
+    height:260px;
+    border-radius: 5px;
+    background:cadetblue;
+}
